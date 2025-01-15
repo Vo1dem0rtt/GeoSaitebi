@@ -1,5 +1,8 @@
 {
- 
-    "filmebi" :"Georgian Movies"
-    
+    "filmebi":"Films",
+    "serialebi":"series",
+    "animeebi":"anime",
+    "animaciebi":"animation",
+    "televizia":"TV",
+    "registracia":"registration"
 }

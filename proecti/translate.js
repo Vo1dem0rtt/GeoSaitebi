@@ -1,17 +1,16 @@
-async function switchLanguage(lang) {
-    document.cookie = lang=${lang}; samesite=none; secure
+async function Enis_Shecvla(lang) {
+    document.cookie = `lang=${lang}; samesite=none; secure`
     if (lang === "eng") {
         document.getElementById('GEO').src = "assetes/en-gb.png";
-        const response = await fetch("English.json");
-        const translations = await response.json();
-
+        const Res = await fetch("English.json");
+        const Trans = await Res.json();
+    
         const translatableElements = document.querySelectorAll('[data-i18n]');
-
+    
         translatableElements.forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (translations[key]) {
-                element.innerHTML = translations[key];
-                element.placeholder = translations[key];
+            if (Trans[key]) {
+                element.innerHTML = Trans[key];
             }
         });
     } else if (lang === "geo") {
@@ -30,16 +29,14 @@ arr.forEach(element => {
 
 async function translate() {
     if (lang === "eng") {
-        document.getElementById('GEO').src = "assetes/en-gb.png";
-        const response = await fetch('English.json');
-        const translations = await response.json();
+        const Res = await fetch('English.json');
+        const Trans = await Res.json();
         const translatableElements = document.querySelectorAll('[data-i18n]');
-
+    
         translatableElements.forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (translations[key]) {
-                element.innerHTML = translations[key];
-                element.placeholder = translations[key];
+            if (Trans[key]) {
+                element.innerHTML = Trans[key];
             }
         });
     }
